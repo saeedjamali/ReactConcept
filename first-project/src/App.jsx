@@ -1,16 +1,19 @@
 import { version } from "react";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import CourseList from "./components/CourseList";
 
 
 
 function App() {
     return (
-        <div>
-            <h1 className="w-full font-bold mx-auto block">My Courses ...</h1>
-        
-        
+        <div className="container mx-auto">
+            <Header />
+            <Nav />
+            <CourseList />
         </div>
-
     );
+
 }
 
 

@@ -7,7 +7,7 @@
 //? 2-cmd : code .    => open vscode
 //? 3-npm install  => install package /create node-modules According to package.json dependencies/
 //? 4-npm run dev  => run project
-//? 5-npm 
+//? 5-npm
 
 
 
@@ -23,3 +23,6 @@
 
 //* Component : Piece of UI ,that has is own Data , Logic ANd Appearance
 //? in copmponents Data pass is only possible between parent and child (not sibling )
+
+
+//* Props (properties)  :  are used to pass data from parent component to child component (from Up to Down)
