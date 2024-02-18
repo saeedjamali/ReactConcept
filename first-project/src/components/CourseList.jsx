@@ -5,41 +5,41 @@ const courses = [
         id: 1,
         title: "Design Strategy",
         description: "Lesson on planning",
-        imageUrl: "/img1.jpg",
+        imageUrl: "img1.jpg",
         rate: "4.5",
         tags: ["language", "UI/UX"],
         start: "12.07.2023",
-        status: "Completed"
+        status: 0
     },
     {
         id: 2,
         title: "Design Strategy",
         description: "Lesson on planning",
-        imageUrl: "/img1.jpg",
+        imageUrl: "img2.jpg",
         rate: "4.5",
-        tags: ["language", "UI/UX"],
+        tags: ["language", "UI/UX", "front", "backend"],
         start: "12.07.2023",
-        status: "Completed"
+        status: 1
     },
     {
         id: 3,
         title: "Design Strategy",
         description: "Lesson on planning",
-        imageUrl: "/img1.jpg",
+        imageUrl: "img3.jpg",
         rate: "4.5",
-        tags: ["language", "UI/UX"],
+        tags: ["language"],
         start: "12.07.2023",
-        status: "Completed"
+        status: 2
     },
     {
         id: 4,
         title: "Design Strategy",
         description: "Lesson on planning",
-        imageUrl: "/img1.jpg",
+        imageUrl: "img1.jpg",
         rate: "4.5",
         tags: ["language", "UI/UX"],
         start: "12.07.2023",
-        status: "Completed"
+        status: 1
     },
 ];
 
@@ -50,7 +50,7 @@ function CourseList() {
                 {
                     courses.map((course) => {
                         return (
-                            <Course key={course.id} />
+                            <Course key={course.id} course={course} />
                         )
                     })
                 }

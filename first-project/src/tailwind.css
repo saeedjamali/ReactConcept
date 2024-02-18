@@ -7,15 +7,22 @@
         @apply hover:bg-gray-600 inline-block w-full h-full text-center rounded-sm mx-2 text-white ring-slate-800 ring-1 py-1 mt-1 sm:mt-0 shadow-md;
     }
 
+
     .badge--secondary {
         @apply font-thin text-[16px] bg-slate-300 rounded-md px-1 flex items-center justify-center text-stone-500;
     }
 
-    .badge--primary {
+
+    .badge--modified {
         @apply font-thin text-[16px] bg-slate-300 rounded-md px-1 flex items-center justify-center text-stone-500;
     }
 
-    .badge--danger {
-        @apply font-thin text-[16px] bg-slate-300 rounded-md px-1 flex items-center justify-center text-stone-500;
+    
+    .badge--completed {
+        @apply font-thin text-[16px] bg-green-300 text-green-950 rounded-md px-1 flex items-center justify-center text-stone-500;
+    }
+
+    .badge--uncompleted {
+        @apply font-thin text-[16px] bg-red-300 text-red-950 rounded-md px-1 flex items-center justify-center text-stone-500;
     }
 }
