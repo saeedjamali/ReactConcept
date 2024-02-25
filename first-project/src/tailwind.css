@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+    
     .nav-items {
         @apply hover:bg-gray-600 inline-block w-full h-full text-center rounded-sm mx-2 text-white ring-slate-800 ring-1 py-1 mt-1 sm:mt-0 shadow-md;
     }
@@ -28,7 +29,7 @@
 
 
     .badge--counter {
-        @apply bg-slate-400 rounded-full py-1 px-2 text-white;
+        @apply bg-slate-400 rounded-full px-2 text-white;
     }
 
     

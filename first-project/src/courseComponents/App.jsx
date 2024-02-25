@@ -1,8 +1,8 @@
 import { useState, version } from "react";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import CourseList from "./components/CourseList";
-import TabData from './components/TabData'
+import Header from "./Header";
+import Nav from "./Nav";
+import CourseList from "./CourseList";
+import TabData from './TabData'
 
 
 
