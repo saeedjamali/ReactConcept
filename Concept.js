@@ -45,6 +45,17 @@
 //? when Updating state based on prev state value : we use callback method  :>  setCount((c)=>c+1);     //zamani k meqdar state vabaste b meqdar qabli hast dar method useState az callback estefade mikonim
 
 
+//TODO : Control Component sample input text,select option,radio,checkBox .... use event onChange and define state
+//TODO in control component define state 3 steps :
+//? 1-define state   :>  const [title,setTitle]=useState("");
+//? 2-quanification value property in tag :> <select value={title} />
+//? 2-define onChenge event :> <select value={title} onChange={setTitle}/>
+
+
+
+
+
+
 //TODO mui.com ==> Component Design
 
 //TODO react-icons : npm install react-icons --save
@@ -62,7 +73,7 @@
 
 //* When to create state ?
 //? 1-The data change at app lifecycle
-//? 2-Caonnot be computed from other state or props : (s02-e02 :state managment)
+//? 2-Cannot be computed from other state or props : (s02-e02 :state managment)
 //? Should re-render the component(Update UI)
 
 
@@ -76,3 +87,20 @@
 
  //* Lifting State Up
  //TODO rfce 
+
+//! Sort Notes is very important Episode : S03-E09
+
+
+//* Children Props
+//? this props insert between tags component :> sample : <Notes> Hello notes </Notes>
+
+//? access to children props with : props.children
+
+
+
+//Todo Fake Api : rick and morty api
+
+//* Component is a function that handle ONE task.
+ 
+
+//* Props drilling : b halati gofte mishe k ma bein parent va child chand level darim va props az valed b farzand pass dade mishavad va bazi az farzand haye miani aslan az props use nemikonan >> solve : Component composition
