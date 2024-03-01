@@ -104,3 +104,57 @@
  
 
 //* Props drilling : b halati gofte mishe k ma bein parent va child chand level darim va props az valed b farzand pass dade mishavad va bazi az farzand haye miani aslan az props use nemikonan >> solve : Component composition
+
+
+
+//* Pure function : do not modify any external state : give the same input, same output
+
+//* ImPure function : given the same input , may produce differrent output at differennt times : can rely on external factors such as changes in global variableor other functions 
+
+
+//TODO pure component : skipping unnecessary re-renders for class componenets : in function component use memo
+
+
+//TODO  Effects and Data fetching
+//? Component lifeCycle
+//? Data fetching
+//? useEffect hook
+
+
+
+
+//TODO Component lifecycle
+//* Mount : component renderd for the first time - initial state and props created
+//* Re-render : updating - state or props changes - Parent component re-renders leeded to re-render child
+//* UnMount : componenent destroyed and removed - state and props are destroyed
+
+
+//TODO Post : send  Get : Received
+
+//TODO useEffect : run in mount component  : useEffect (()=>{},[dependey array])
+//? Dependency array : when to run effect function >
+//? 1- useEffect(()=>{});   ==> on every update is render run
+//? 2- useEffect(()=>{},[]) ==> just on mount run
+//? 3-  useEffect(()=>{},[stae,props])  ==> run when state or props (value arrays) change : after rerender useEffect
+
+//! UseEffect Problem : use of useState leaded to loop when state is dependencies array
+//* Comounent first run second run useEffect
+
+
+//TODO state => change => re-render => browser paint => useEffect run
+
+//TODO Sample 
+ //! run in Everey Rerender
+ console.log("Rerender Component");  
+  
+ //! run in Everey Rerender
+ useEffect(() => console.log("Use Effect Run without Dependecy"));
+
+ //! run in First Rerender
+ useEffect(() => console.log("Use Effect Run First Mount"),[]);
+
+ //! run in Everey state SearchInput changed
+ useEffect(() => console.log("Use Effect Run Input Search changed"),[searchInput]);
+
+
+

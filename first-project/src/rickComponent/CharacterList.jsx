@@ -6,7 +6,7 @@ function CharacterList({ characters, onShowReview }) {
     return (
         <div>
             {
-                characters.map((character) => <CharacterItem key={character.id} character={character} onShowReview={(id) => onShowReview(id)} />)
+                characters.map((character) => <CharacterItem key={character.id} character={character} onShowReview={ onShowReview} />)
             }
 
         </div>

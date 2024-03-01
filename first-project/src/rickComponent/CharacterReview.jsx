@@ -5,6 +5,7 @@ import { IoEyeSharp } from "react-icons/io5";
 
 
 function CharacterReview({ character }) {
+    console.log("character review :", character);
     return (
         <div className="flex bg-slate-600 rounded-md mt-2 ">
             <div>

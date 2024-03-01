@@ -14,7 +14,7 @@ function CharacterItem({ character, onShowReview }) {
             <div className='flex-1 h-20 p-2 text-white flex flex-col justify-around '>
                 <div className='flex items-center justify-start'>
                     <span className='mr-1'>{character.gender == "Male" ? <MdFace /> : <MdFace2 />}</span>
-                    <span className='font-bold'>{character.name}</span>
+                    <span className='font-bold'>{character.name.substring(0,9). concat('...')}</span>
                 </div>
                 <div className='flex items-center justify-start'>
                     <span className={`mr-1 ${character.status == "Dead" ? "text-red-500" : "text-green-500"} `}><GoDotFill /></span>
