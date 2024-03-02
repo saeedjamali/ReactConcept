@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 
 // import {episodes } from '../../data/data'
 
-function CharacterDetail({ selectedId }) {
+function CharacterDetail({ selectedId,addTooFavorite,isFavorite }) {
 
   const [character, setCharacter] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +40,7 @@ function CharacterDetail({ selectedId }) {
   return (
     <div>
       {/* <LazyLoad > */}
-      <CharacterReview character={character} />
+      <CharacterReview isFavorite={isFavorite} addTooFavorite={addTooFavorite} character={character} />
       <EpisodList character={character} />
       {/* </LazyLoad> */}
     </div>

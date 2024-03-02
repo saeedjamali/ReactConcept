@@ -157,4 +157,6 @@
  useEffect(() => console.log("Use Effect Run Input Search changed"),[searchInput]);
 
 
+ //* Flat function : use when array to array [[]]=> []  67:s6-13
+
 

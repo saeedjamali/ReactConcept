@@ -4,8 +4,8 @@ import { GoDotFill } from "react-icons/go";
 import { IoEyeSharp } from "react-icons/io5";
 
 
-function CharacterReview({ character }) {
-    console.log("character review :", character);
+function CharacterReview({ character, addTooFavorite, isFavorite }) {
+    // console.log("character review :", character);
     return (
         <div className="flex bg-slate-600 rounded-md mt-2 ">
             <div>
@@ -26,8 +26,8 @@ function CharacterReview({ character }) {
                     <span className="text-gray-400 text-base">Last known location:</span>
                     <span className="font-bold text-sm">{character.location.name}</span>
                 </div>
+                {isFavorite ? <span className="block text-red-300 font-normal text-sm ring-red-300 ring-2 rounded-xl p-2 ml-4 mt-4">Added to Favorite </span> : <button className="text-white font-normal text-sm bg-slate-400 rounded-xl p-2 ml-4 mt-4" onClick={() => addTooFavorite(character)}>Add to Favorite</button>}
 
-                <button className="text-white font-normal text-sm bg-slate-400 rounded-xl p-2 ml-4 mt-4">Add toFavorite</button>
 
             </div>
 

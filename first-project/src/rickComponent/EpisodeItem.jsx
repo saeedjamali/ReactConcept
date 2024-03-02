@@ -12,7 +12,7 @@ function EpisodeItem({ url, index }) {
             try {
                 const { data } = await axios.get(url);
                 setEpisode(data);
-                console.log(data);
+                // console.log(data);
             } catch (error) {
                 toast.error("Not access to episode");
             }
