@@ -13,11 +13,13 @@ import RickApp from './rickComponent/RickApp';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <div>
     {/* <App /> */}
     {/* <NoteApp /> */}
     {/* <Accordion /> */}
-    <RickApp />
+    < RickApp />
 
-  </React.StrictMode>,
+  </div>
+  // </React.StrictMode>,
 )
