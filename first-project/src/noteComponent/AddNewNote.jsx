@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 
 
@@ -6,6 +6,7 @@ import { useState } from "react"
 function AddNewNote({ setNewNotes }) {
     const [title, setTitle] = useState("");
     const [description, SetDescription] = useState("");
+    const titleValue = useRef();
     //    const {setNewNotes} =props;
 
 
@@ -25,13 +26,14 @@ function AddNewNote({ setNewNotes }) {
         SetDescription("");
         console.log(newNote);
         setNewNotes((notes) => [...notes, newNote]);
+        titleValue.current.focus();
 
     }
     return (
         <div>
             <span className="w-full mt-4 text-1xl font-bold block text-center">Add New Note</span>
             <form onSubmit={(e) => handleAddNewNote(e)}>
-                <input  className="input__text" type="text" autoFocus  placeholder="Note Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <input className="input__text" type="text" autoFocus placeholder="Note Title" value={title} onChange={(e) => setTitle(e.target.value)} ref={titleValue} />
                 <input className="input__text" type="text" placeholder="Note Description" value={description} onChange={(e) => SetDescription(e.target.value)} />
                 <button className="btn__submit" onClick={(e) => handleAddNewNote(e)} >Add New Note</button>
             </form>

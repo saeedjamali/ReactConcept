@@ -1,5 +1,5 @@
 //* React is JavaScript Library
-
+//? Upload this project in git : when install flowbit for modal volume nodeModule up to 100 and error when push git // .gitignore  locate in root project and solve it
 
 //* Create-React App : traditional / Vite : new approach T faster and  easiest
 //TODO Steps create  react project via cmd
@@ -77,16 +77,16 @@
 //? Should re-render the component(Update UI)
 
 
- //* Where to place state ?
- //? 1- Develop static version
- //? 2- Decide on creating state
- //? 3- Only Used by this component ? yes : leave in component
- //? 4- Also used by child component ? yes : Pass to child via props
- //? 5-Used by sibling components ? yes : Lifting state up to parent
+//* Where to place state ?
+//? 1- Develop static version
+//? 2- Decide on creating state
+//? 3- Only Used by this component ? yes : leave in component
+//? 4- Also used by child component ? yes : Pass to child via props
+//? 5-Used by sibling components ? yes : Lifting state up to parent
 
 
- //* Lifting State Up
- //TODO rfce 
+//* Lifting State Up
+//TODO rfce 
 
 //! Sort Notes is very important Episode : S03-E09
 
@@ -101,7 +101,7 @@
 //Todo Fake Api : rick and morty api
 
 //* Component is a function that handle ONE task.
- 
+
 
 //* Props drilling : b halati gofte mishe k ma bein parent va child chand level darim va props az valed b farzand pass dade mishavad va bazi az farzand haye miani aslan az props use nemikonan >> solve : Component composition
 
@@ -144,19 +144,19 @@
 //TODO state => change => re-render => browser paint => useEffect run
 
 //TODO Sample 
- //! run in Everey Rerender
- console.log("Rerender Component");  
-  
- //! run in Everey Rerender
- useEffect(() => console.log("Use Effect Run without Dependecy"));
+//! run in Everey Rerender
+console.log("Rerender Component");
 
- //! run in First Rerender
- useEffect(() => console.log("Use Effect Run First Mount"),[]);
+//! run in Everey Rerender
+useEffect(() => console.log("Use Effect Run without Dependecy"));
 
- //! run in Everey state SearchInput changed
- useEffect(() => console.log("Use Effect Run Input Search changed"),[searchInput]);
+//! run in First Rerender
+useEffect(() => console.log("Use Effect Run First Mount"), []);
+
+//! run in Everey state SearchInput changed
+useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput]);
 
 
- //* Flat function : use when array to array [[]]=> []  67:s6-13
+//* Flat function : use when array to array [[]]=> []  67:s6-13
 
 
