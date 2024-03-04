@@ -19,9 +19,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     {/* <NoteApp /> */}
     {/* <Accordion /> */}
-    {/* < RickApp /> */}
+    < RickApp />
 
-    <Stopwatch />
+    {/* <Stopwatch /> */}
 
   </div>
   // </React.StrictMode>,

@@ -7,17 +7,19 @@ import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { characterItem } from "../../data/data";
 import Modals from "./Modals";
+import useCharacter from "../hooks/useCharacter";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 
 function RickApp() {
 
 
-  const [characters, setCharacters] = useState([]);
+
   const [searchInput, setSearchInput] = useState("");
-  const [isLoading, setIsLoading] = useState([false]);
+  const { isLoading, characters } = useCharacter(searchInput);
   const [selectedId, setSelectedId] = useState(null);
-  const [favorites, SetToFavorites] = useState(() => JSON.parse(localStorage.getItem("Favorites")) || []);
   const [open, setOpen] = useState(false);
+  const [favorites, SetToFavorites] = useLocalStorage("Favorites", []);
   // const [isFavorite, SetIsFavorite] = useState(false);
 
 
@@ -53,41 +55,11 @@ function RickApp() {
 
   // }, []);
 
-  useEffect(() => {
-    setIsLoading(true);
-
-    //* CleanUp Function : S06-E16
-
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    //* Solution 1 for input Search
-    axios.get(`https://rickandmortyapi.com/api/character/?name=${searchInput}`, { signal })
-      .then((res) => {
-        // console.log("Start Axios : ", res);
-
-        //* Solution 2 for input Search
-        // const result = res.data.results;
-        //const filteredItem = results.filter((ch) => ch.name.toLowerCase().includes(searchInput));
-        setCharacters(res.data.results);
-        // console.log("char[0]", characters[0]);
-
-        // setFilteredCharacters(res.data.results);
-      })
-      .catch((err) => toast.error(err.response.data.error))
-      .finally(() =>
-        setIsLoading(false)
-      );
-
-    return () => {
-      controller.abort();
-    }
-
-  }, [searchInput]);
 
   // useEffect(() => setCharacter(characters[0]), [characters]);
 
-  useEffect(() => localStorage.setItem("Favorites", JSON.stringify(favorites)), [favorites])
+
+
 
   const handleSearchCharacter = (e) => {
     let searchValue = e.target.value.toLowerCase().trim();
@@ -155,7 +127,7 @@ function RickApp() {
 
 
           <div className="character__detail col-span-6 md:col-span-2 w-full h-24 ">
-            {selectedId ? <CharacterDetail isFavorite={isFavorite} selectedId={selectedId} addTooFavorite={handleAddToFavorite} isSetLoading={setIsLoading} /> : <div className="bg-slate-100 rounded-md p-2">Please Select a Character..</div>}
+            {selectedId ? <CharacterDetail isFavorite={isFavorite} selectedId={selectedId} addTooFavorite={handleAddToFavorite} /> : <div className="bg-slate-100 rounded-md p-2">Please Select a Character..</div>}
 
           </div>
 

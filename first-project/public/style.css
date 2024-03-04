@@ -3777,6 +3777,11 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
 }
 
+.ring-green-400 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(49 196 141 / var(--tw-ring-opacity));
+}
+
 .ring-green-500 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(14 159 110 / var(--tw-ring-opacity));

@@ -159,4 +159,34 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 
 //* Flat function : use when array to array [[]]=> []  67:s6-13
 
+//TODO useRef(initialValue)
+//? Call useRef at the top level of your component to declare a ref.
+//* 1- Referencing a value with a ref :On the next renders, useRef will return the same object. You can change its current property to store information and read it later. This might remind you of state, but there is an important difference.
+
+//* 2-Changing a ref does not trigger a re-render. This means refs are perfect for storing information that doesn’t affect the visual output of your component. For example, if you need to store an interval ID and retrieve it later, you can put it in a ref. To update the value inside the ref, you need to manually change its current property:
+
+
+//* By using a ref, you ensure that:
+
+//? You can store information between re-renders (unlike regular variables, which reset on every render).
+//? Changing it does not trigger a re-render (unlike state variables, which trigger a re-render).
+//? The information is local to each copy of your component (unlike the variables outside, which are shared).
+
+//* After React creates the DOM node and puts it on the screen, React will set the current property of your ref object to that DOM node. Now you can access the <input>’s DOM node and call methods like focus()
+//? inputRef.current.focus();
+
+
+
+//* forwardRef : pass ref from parent to child
+
+
+//TODO Custom Hook
+//* Share UI by  Component
+//* Share logic (sample fetch data) by Custom Hook
+
+//* Custom Hooks :
+//? 1- start with use : useFetch,useLocalStorage,....
+//? 2- at least one hooks should be used => useState ,...
+
+
 
