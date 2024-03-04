@@ -6,6 +6,7 @@ import LoadingPage from "./LoadingPage";
 import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { characterItem } from "../../data/data";
+import Modals from "./Modals";
 
 
 function RickApp() {
@@ -15,7 +16,8 @@ function RickApp() {
   const [searchInput, setSearchInput] = useState("");
   const [isLoading, setIsLoading] = useState([false]);
   const [selectedId, setSelectedId] = useState(null);
-  const [favorites, SetToFavorites] = useState([]);
+  const [favorites, SetToFavorites] = useState(() => JSON.parse(localStorage.getItem("Favorites")) || []);
+  const [open, setOpen] = useState(false);
   // const [isFavorite, SetIsFavorite] = useState(false);
 
 
@@ -85,6 +87,7 @@ function RickApp() {
 
   // useEffect(() => setCharacter(characters[0]), [characters]);
 
+  useEffect(() => localStorage.setItem("Favorites", JSON.stringify(favorites)), [favorites])
 
   const handleSearchCharacter = (e) => {
     let searchValue = e.target.value.toLowerCase().trim();
@@ -123,14 +126,25 @@ function RickApp() {
   // useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput]);
 
 
+  const handleShowModal = () => {
+    setOpen(() => !open);
+  }
 
+  const handleDeleteFavorite = (id) => {
+    const currentFavorites = favorites.filter((fav) => fav.id != id);
+    SetToFavorites(currentFavorites);
+  }
 
   return (
 
-    <div className="bg-slate-800">
+    <div className="bg-slate-800 relative">
+
       <Toaster />
+
       <div className="container mx-auto">
-        <Navbar numberOfFavorite={favorites.length} characters={characters} onSearchCharacter={(e) => handleSearchCharacter(e)} />
+
+        <Modals open={open} onOpen={handleShowModal} favorites={favorites} onDeleteFavorites={handleDeleteFavorite} />
+        <Navbar numberOfFavorite={favorites.length} characters={characters} onSearchCharacter={(e) => handleSearchCharacter(e)} onShowModal={handleShowModal} />
         <div className="grid grid-cols-6 md:grid-cols-3 gap-4 mt-4">
           <div className="Character__list col-span-6 md:col-span-1 w-full ">
             {/* {console.log("Characters is :", characters)} */}
