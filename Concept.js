@@ -189,4 +189,39 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 //? 2- at least one hooks should be used => useState ,...
 
 
+//TODO useReducer  (counter sample:reduce func for + - reset)
+
+//* const [state,dispatch-> func]=useReducer(reducer-> function,initialArg,init?)
+
+//? 1.call useReducer
+//? 2.move login to reducer function
+//? 3.dispatch action inside event Handlers
+//? 4.write login inside reducer function based on each action
+//? 5.return new data inside action as new state
+
+
+
+
+
+//TODO React Router Dom is library create SPA (single page applicatio)
+//* install : npm i react-router-dom@latest
+//* Add <BrowserRouter> to main page
+//* <Routes>   <Route path="/" element={<Home/>}>  
+
+//* a tag alternative : <Link to="" /></Link>  for not refresh page
+//* for active Link we use <NavLink to="">
+
+//* <Layout /> component use for share simialr contet sample nav or footer
+//* Layout use  <Outlet /> for show Children  props
+//? Layout use for nested Routes
+
+
+//* How to get Id from route => useParams  return obj{} : Dynamic Routes with pass id
+
+//* useSearchParams() return array [searchParams,setSearchParams]  => searchParams.get (name)
+
+
+//TODO Programatically navigation => same as Link
+//? 1.useNavigate()    : return function(path,optional=> {replace:true,state:""}=> access this data with useLocation) 
+//? 2.Navigate Component
 
