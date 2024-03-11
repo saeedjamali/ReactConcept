@@ -206,7 +206,7 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 //TODO React Router Dom is library create SPA (single page applicatio)
 //* install : npm i react-router-dom@latest
 //* Add <BrowserRouter> to main page
-//* <Routes>   <Route path="/" element={<Home/>}>  
+//* <Routes>   <Route path="/" element={<Home/>}>
 
 //* a tag alternative : <Link to="" /></Link>  for not refresh page
 //* for active Link we use <NavLink to="">
@@ -222,6 +222,27 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 
 
 //TODO Programatically navigation => same as Link
-//? 1.useNavigate()    : return function(path,optional=> {replace:true,state:""}=> access this data with useLocation) 
+//? 1.useNavigate()    : return function(path,optional=> {replace:true,state:""}=> access this data with useLocation)
 //? 2.Navigate Component
 
+
+
+
+//TODO UseContext video BroCode
+
+//* UseContext() =>
+//?                    React Hook that allows yout to share value
+//?                    between multiple levels of components
+//?                    without passing props (props drilling) through each level
+
+//* PROVIDER COMPONENT
+//?                    1-import {createCntext} from 'react
+//?                    2-export const myContext =createContext();
+//?                    3-<MyContext.Provider value={value}>
+//?                             <child />
+//?                      </MyContext.Provider>
+
+//* CONSUMER COMPONENT
+//?                    1-import react,{useContext} from 'react'
+//?                    2-import myContext from './ComponentA'
+//?                    3-const value =useContext(myContext)
