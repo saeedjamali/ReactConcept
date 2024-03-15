@@ -193,6 +193,7 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 
 //* const [state,dispatch-> func]=useReducer(reducer-> function,initialArg,init?)
 
+//? useReducer work for sync function and not appopriate for ASYNC function
 //? 1.call useReducer
 //? 2.move login to reducer function
 //? 3.dispatch action inside event Handlers
