@@ -249,3 +249,8 @@ useEffect(() => console.log("Use Effect Run Input Search changed"), [searchInput
 //?                    1-import react,{useContext} from 'react'
 //?                    2-import myContext from './ComponentA'
 //?                    3-const value =useContext(myContext)
+
+//? Authentication => who is he: information  : is user or no ?
+//? Authorization => what access have to routes or files() => Roles
+
+
